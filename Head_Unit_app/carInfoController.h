@@ -6,6 +6,10 @@
 #include <CommonAPI/CommonAPI.hpp>
 #include <v0/commonapi/ICProxy.hpp>
 #include <QDebug>
+#include <QTimer>
+#include <QRandomGenerator>
+#include <iostream>
+#include <cmath>
 using namespace v0::commonapi;
 
 class CarInfoController : public QObject {
@@ -14,6 +18,7 @@ class CarInfoController : public QObject {
     Q_PROPERTY(QString modeColor READ modeColor WRITE setModeColor NOTIFY modeColorChanged)
     Q_PROPERTY(QString blinkDirection READ blinkDirection WRITE setDirection NOTIFY directionChanged)
     Q_PROPERTY(int batteryValue READ batteryValue NOTIFY batteryValueChanged)
+    Q_PROPERTY(float distanceCM READ distanceCM WRITE setDistance NOTIFY distanceChanged)
 
 public:
     explicit CarInfoController(QObject *parent = nullptr);
@@ -26,6 +31,9 @@ public:
 
     QString blinkDirection() const;
     Q_INVOKABLE void setDirection(const QString& direction);
+
+    float distanceCM() const;
+    Q_INVOKABLE void setDistance(float distance);
 
     int batteryValue() const;
 
@@ -41,6 +49,16 @@ signals:
     void directionChanged();
     void batteryValueChanged();
     void distValueChanged();
+    void distanceChanged();
+
+private slots:
+    void generateRandomDistance() {
+        int randomDistanceInt = QRandomGenerator::global()->bounded(0, 2000);
+        float randomDistance = static_cast<float>(randomDistanceInt) / 100.0f;
+        randomDistance = std::round(randomDistance * 10) / 10.0f;
+        setDistance(randomDistance);
+        std::cout << "New random distance: " << randomDistance << " cm" << std::endl;
+    }
 
 private:
     int m_batteryLevel;
@@ -49,6 +67,9 @@ private:
     QString m_direction;
     int qt_battery;
     float qt_dist;
+    float m_distance;
+
+    QTimer m_timer;
 };
 
 #endif // CARINFOCONTROLLER_H

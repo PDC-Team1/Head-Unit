@@ -2,7 +2,7 @@
 #include <QTimer>
 
 CarInfoController::CarInfoController(QObject *parent)
-    : QObject(parent), m_batteryLevel(80), m_modeColor("#A2F2D9"), m_direction("non"), qt_battery(0) {
+    : QObject(parent), m_batteryLevel(80), m_modeColor("#A2F2D9"), m_direction("non"), qt_battery(0), m_distance(0.0f) {
     runtime = CommonAPI::Runtime::get();
 
     myProxy = runtime->buildProxy<ICProxy>("local","commonapi.IC_service");
@@ -43,10 +43,9 @@ CarInfoController::CarInfoController(QObject *parent)
         emit directionChanged();
 
     });
-/*
-    QTimer* timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &CarInfoController::getBattery);
-    timer->start(1000);/*/
+
+    connect(&m_timer, &QTimer::timeout, this, &CarInfoController::generateRandomDistance);
+    m_timer.start(1000);
 }
 
 int CarInfoController::batteryLevel() const {
@@ -95,6 +94,17 @@ void CarInfoController::setDirection(const QString& direction) {
     if (m_direction != direction) {
         m_direction = direction;
         emit directionChanged();
+    }
+}
+
+float CarInfoController::distanceCM() const {
+    return m_distance;
+}
+
+void CarInfoController::setDistance(float distance) {
+    if (m_distance != distance) {
+        m_distance = std::round(distance * 10) / 10.0f;
+        emit distanceChanged();
     }
 }
 

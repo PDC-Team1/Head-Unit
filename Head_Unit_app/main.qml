@@ -210,6 +210,10 @@ ApplicationWindow {
         visible: showMenu
     }
 
+    ParkingWindow {
+        visible: gearController.selectedButton === "R" ? true : false
+    }
+
     StartScreen {
         id: startScreen
         anchors.centerIn: parent

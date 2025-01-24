@@ -35,5 +35,8 @@
         <file>./weather_image/snow.png</file>
         <file>./weather_image/storm.png</file>
         <file>./weather_image/sunny.png</file>
+	<file>./img_dist_green.png</file>
+	<file>./img_dist_orange.png</file>
+	<file>./img_dist_red.png</file>
     </qresource>
 </RCC>
