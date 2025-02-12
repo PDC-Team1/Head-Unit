@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Head_Unit_app",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Head_Unit_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Head_Unit_app-Debug-9ecd642301a721556d4e.json",
+					"name" : "Head_Unit_app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Head_Unit_app_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Head_Unit_app_autogen-Debug-8af120edf1563abe0161.json",
+					"name" : "Head_Unit_app_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "IC_someip-someip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-IC_someip-someip-Debug-1fe5be9242894c171126.json",
+					"name" : "IC_someip-someip",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "IC_someip-someip_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-IC_someip-someip_autogen-Debug-df3827b4269dd796e833.json",
+					"name" : "IC_someip-someip_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hanbin/PDC/Head-Unit/build-Head_Unit_app-Desktop-Debug",
+		"source" : "/home/hanbin/PDC/Head-Unit/Head_Unit_app"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
