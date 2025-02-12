@@ -21,7 +21,7 @@ Item {
             heightData: 250
 
             Image {
-                source: "./normal_mode.jpg"
+                source: "./image/normal_mode.jpg"
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectCrop
             }
@@ -48,7 +48,7 @@ Item {
             heightData: 250
 
             Image {
-                source: "./sports_mode.jpg"
+                source: "./image/sports_mode.jpg"
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectCrop
             }
@@ -75,7 +75,7 @@ Item {
             heightData: 250
 
             Image {
-                source: "./simple_mode.jpg"
+                source: "./image/simple_mode.jpg"
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectCrop
             }

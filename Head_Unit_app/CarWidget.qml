@@ -15,7 +15,7 @@ Item {
             id: carImage
             width: 270
             height: 150
-            source: "./img_revuelto.png"
+            source: "./image/img_revuelto.png"
 
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.horizontalCenterOffset: -15
@@ -25,7 +25,7 @@ Item {
 
         Image {
             id: leftSignOrigin
-            source:"./left_origin.png"
+            source:"./image/left_origin.png"
 
             anchors.top: carImage.bottom
             //anchors.topMargin: 5
@@ -35,7 +35,7 @@ Item {
 
         Image {
             id: rightSignOrigin
-            source: "./right_origin.png"
+            source: "./image/right_origin.png"
 
             anchors.verticalCenter: leftSign.verticalCenter
             anchors.left: leftSign.right
@@ -43,7 +43,7 @@ Item {
         }
         Image {
             id: leftSign
-            source: "./left_green.png"
+            source: "./image/left_green.png"
             visible:  (carInfoController.blinkDirection === "left" || carInfoController.blinkDirection === "emergency") && blinking
 
             anchors.top: carImage.bottom
@@ -53,7 +53,7 @@ Item {
 
         Image {
             id: rightSign
-            source: "./right_green.png"
+            source: "./image/right_green.png"
             visible:  (carInfoController.blinkDirection === "right" || carInfoController.blinkDirection === "emergency" ) && blinking
             anchors.verticalCenter: leftSign.verticalCenter
             anchors.left: leftSign.right
@@ -71,7 +71,7 @@ Item {
 
         Image {
             id: batteryBar
-            source: "./Battery.png"
+            source: "./image/Battery.png"
 
             anchors.verticalCenter: rightSign.verticalCenter
             anchors.left: rightSign.right

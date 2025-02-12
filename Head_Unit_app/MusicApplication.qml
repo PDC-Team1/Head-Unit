@@ -79,7 +79,7 @@ Item {
                         anchors.leftMargin: 40
                         anchors.verticalCenter: parent.verticalCenter
 
-                        source: model.coverImagePath !== "" ? model.coverImagePath : "./icon_home.png"
+                        source: model.coverImagePath !== "" ? model.coverImagePath : "./image/icon_home.png"
                     }
 
                     Text {
@@ -176,7 +176,7 @@ Item {
             height: width
             anchors.centerIn: parent
 
-            source: musicPlayBar.playClicked === false ? "./Play.png" : "./Pause.png"
+            source: musicPlayBar.playClicked === false ? "./image/Play.png" : "./image/Pause.png"
 
             MouseArea {
                 anchors.fill: parent

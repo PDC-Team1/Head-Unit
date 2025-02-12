@@ -14,7 +14,7 @@ Rectangle {
 
     Image {
         id: huScreen1
-        source: "./HU_screen.png"
+        source: "./image/HU_screen.png"
         anchors.centerIn: parent
 
         opacity: logo_image.currentState === "Ready" ? 1 : 0
@@ -25,7 +25,7 @@ Rectangle {
 
     Image {
         id: huScreen2
-        source: "./HU_screen2.png"
+        source: "./image/HU_screen2.png"
         anchors.centerIn: parent
 
         opacity: logo_image.currentState === "Start" ? 1 : 0

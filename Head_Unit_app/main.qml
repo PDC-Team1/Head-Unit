@@ -17,7 +17,7 @@ ApplicationWindow {
         anchors.centerIn: parent
         width: parent.width
         height: parent.height
-        source: "./dark-blue-product-background.jpg"
+        source: "./image/dark-blue-product-background.jpg"
     }
 
 
@@ -108,7 +108,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
                     anchors.topMargin: 40
-                    source: "./icon_music.png"
+                    source: "./image/icon_music.png"
 
                     MouseArea {
                         anchors.fill: parent
@@ -123,7 +123,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: icon_music.bottom
                     anchors.topMargin: 40
-                    source: "./icon_youtube.png"
+                    source: "./image/icon_youtube.png"
 
                     MouseArea {
                         anchors.fill: parent
@@ -138,7 +138,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: icon_youtube.bottom
                     anchors.topMargin: 40
-                    source: "./icon_mode.png"
+                    source: "./image/icon_mode.png"
 
                     MouseArea {
                         anchors.fill: parent
@@ -154,7 +154,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.bottom: parent.bottom
                     anchors.bottomMargin: 20
-                    source: "./icon_menu.png"
+                    source: "./image/icon_menu.png"
                     opacity: carInfoController.modeColor === "#A2F2D9" ? 1 : 0
 
                     MouseArea {
@@ -171,7 +171,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.bottom: parent.bottom
                     anchors.bottomMargin: 20
-                    source: "./icon_menu2.png"
+                    source: "./image/icon_menu2.png"
                     opacity: carInfoController.modeColor === "red" ? 1 : 0
 
                     MouseArea {
@@ -188,7 +188,7 @@ ApplicationWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.bottom: parent.bottom
                     anchors.bottomMargin: 20
-                    source: "./icon_menu3.png"
+                    source: "./image/icon_menu3.png"
                     opacity: carInfoController.modeColor === "white" ? 1 : 0
 
                     MouseArea {

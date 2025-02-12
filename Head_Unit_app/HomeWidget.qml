@@ -22,7 +22,7 @@ Item {
         }
 
         Image {
-            source: "./icon_home.png"
+            source: "./image/icon_home.png"
             width: 40
             height: 40
             anchors. horizontalCenter: parent.horizontalCenter

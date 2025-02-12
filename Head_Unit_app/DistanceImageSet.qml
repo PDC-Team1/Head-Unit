@@ -8,19 +8,19 @@ Item {
 
     Image {
         anchors.centerIn: parent
-        source: "./img_dist_green.png"
+        source: "./image/img_dist_green.png"
         visible: carInfoController.distanceCM > 7.0 ? true : false
     }
 
     Image {
         anchors.centerIn: parent
-        source: "./img_dist_orange.png"
+        source: "./image/img_dist_orange.png"
         visible: carInfoController.distanceCM <= 7.0 && carInfoController.distanceCM > 4.0 ? true : false
     }
 
     Image {
         anchors.centerIn: parent
-        source: "./img_dist_red.png"
+        source: "./image/img_dist_red.png"
         visible: carInfoController.distanceCM <= 4.0 ? true : false
     }
 

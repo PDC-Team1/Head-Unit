@@ -18,7 +18,8 @@ class CarInfoController : public QObject {
     Q_PROPERTY(QString modeColor READ modeColor WRITE setModeColor NOTIFY modeColorChanged)
     Q_PROPERTY(QString blinkDirection READ blinkDirection WRITE setDirection NOTIFY directionChanged)
     Q_PROPERTY(int batteryValue READ batteryValue NOTIFY batteryValueChanged)
-    Q_PROPERTY(float distanceCM READ distanceCM WRITE setDistance NOTIFY distanceChanged)
+    Q_PROPERTY(float distanceRand READ distanceCM WRITE setDistance NOTIFY distanceChanged)
+    Q_PROPERTY(float distanceCM READ distanceValue WRITE setDistance NOTIFY distValueChanged)
 
 public:
     explicit CarInfoController(QObject *parent = nullptr);
@@ -34,6 +35,8 @@ public:
 
     float distanceCM() const;
     Q_INVOKABLE void setDistance(float distance);
+
+    float distanceValue() const;
 
     int batteryValue() const;
 

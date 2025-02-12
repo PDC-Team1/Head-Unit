@@ -33,7 +33,7 @@ Rectangle {
                 MenuButton {
                     id: musicB
                     menuName: "Music"
-                    imgSource: "./img_music.jpg"
+                    imgSource: "./image/img_music.jpg"
 
                     MouseArea {
                         anchors.fill: parent
@@ -47,7 +47,7 @@ Rectangle {
                 MenuButton {
                     id: mapB
                     menuName: "Map"
-                    imgSource: "./img_map.jpg"
+                    imgSource: "./image/img_map.jpg"
 
                     MouseArea {
                         anchors.fill: parent
@@ -61,7 +61,7 @@ Rectangle {
                 MenuButton {
                     id: drivingB
                     menuName: "Driving Mode"
-                    imgSource: "./img_driving_mode.jpg"
+                    imgSource: "./image/img_driving_mode.jpg"
 
                     MouseArea {
                         anchors.fill: parent
@@ -75,7 +75,7 @@ Rectangle {
                 MenuButton {
                     id: weatherB
                     menuName: "Weather"
-                    imgSource: "./img_weather.jpg"
+                    imgSource: "./image/img_weather.jpg"
 
                     MouseArea {
                         anchors.fill: parent
@@ -89,7 +89,7 @@ Rectangle {
                 MenuButton {
                     id: videoB
                     menuName: "Video"
-                    imgSource: "./img_video.jpg"
+                    imgSource: "./image/img_video.jpg"
 
                     MouseArea {
                         anchors.fill: parent

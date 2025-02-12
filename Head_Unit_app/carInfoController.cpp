@@ -108,6 +108,10 @@ void CarInfoController::setDistance(float distance) {
     }
 }
 
+float CarInfoController::distanceValue() const {
+    return qt_dist;
+}
+
 int CarInfoController::batteryValue() const {
     return qt_battery;
 }
