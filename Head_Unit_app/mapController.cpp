@@ -21,7 +21,7 @@ QString MapController::getGoogleMapHtml() const {
                     height: 550px;
                 }
             </style>
-            <script src="https://maps.google.com/maps/api/js?key=AIzaSyBZZHVQnSFtln5-ZHeXMDBLGSjbS1930aQ&region=kr"></script>
+            <script src="https://maps.google.com/maps/api/js?key={YOUR API KEY}&region=kr"></script>
             </head>
 
             <body>
@@ -89,7 +89,7 @@ QString MapController::getGoogleMapHtml_app() const {
                     height: 600px;
                 }
             </style>
-            <script src="http://maps.google.com/maps/api/js?key=AIzaSyBZZHVQnSFtln5-ZHeXMDBLGSjbS1930aQ&region=kr"></script>
+            <script src="http://maps.google.com/maps/api/js?key={YOUR API KEY}&region=kr"></script>
             </head>
 
             <body>

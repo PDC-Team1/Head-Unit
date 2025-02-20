@@ -13,7 +13,7 @@ Weather::Weather(QObject *parent) : QObject(parent), networkManager(new QNetwork
 }
 
 void Weather::fetchWeatherData(const QString &city) {
-    QString apiKey = "1402a4f510a49e883af6d768f7a729c2";
+    QString apiKey = "{YOUR API KEY}";
     QString url = QString("https://api.openweathermap.org/data/2.5/weather?q=%1&appid=%2&units=metric")
             .arg(city, apiKey);
 
@@ -30,7 +30,7 @@ void Weather::fetchWeatherData(const QString &city) {
 }
 
 void Weather::fetch5daysWeather(const QString &city) {
-    QString apiKey = "1402a4f510a49e883af6d768f7a729c2";
+    QString apiKey = "{YOUR API KEY}";
     QString url = QString("https://api.openweathermap.org/data/2.5/forecast?q=%1&appid=%2&units=metric")
             .arg(city, apiKey);
 
