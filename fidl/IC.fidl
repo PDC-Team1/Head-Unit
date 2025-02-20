@@ -11,6 +11,7 @@ interface IC{
             Int32 result
         }
     }
+
     method getBattery{
         out{
             Int32 battery
@@ -26,18 +27,23 @@ interface IC{
         }
     }
     broadcast batteryStatusChanged{
-    	out{
-    		Int32 batValue
-    	}
+        out{
+            Int32 batValue
+        }
     }
     broadcast gearStatusChanged{
-    	out{
-    		String gearValue
-    	}
+        out{
+            String gearValue
+        }
     }
     broadcast lrSignStatusChanged{
         out{
             Int32 signValue
+        }
+    }
+    broadcast pdcStatusChanged{
+        out{
+            Int32 distValue
         }
     }
 }

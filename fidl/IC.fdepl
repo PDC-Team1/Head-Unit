@@ -15,17 +15,22 @@ define org.genivi.commonapi.someip.deployment for interface commonapi.IC{
         SomeIpMethodID = 30002
     }
     broadcast batteryStatusChanged{
-    	SomeIpEventID = 40000
-    	SomeIpEventGroups = { 33011 }
+        SomeIpEventID = 40000
+        SomeIpEventGroups = { 33011 }
     }
     broadcast gearStatusChanged{
-    	SomeIpEventID = 40001
-    	SomeIpEventGroups = { 33011 }
+        SomeIpEventID = 40001
+        SomeIpEventGroups = { 33011 }
     }
     broadcast lrSignStatusChanged{
         SomeIpEventID = 40002
         SomeIpEventGroups = { 33011 }
     }
+    broadcast pdcStatusChanged{
+        SomeIpEventID = 40003
+        SomeIpEventGroups = { 33011 }
+    }
+
 }
 
 define org.genivi.commonapi.someip.deployment for provider as Service{
