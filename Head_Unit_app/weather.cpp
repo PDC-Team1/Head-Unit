@@ -59,18 +59,18 @@ void Weather::onNetworkReply(QNetworkReply *reply) {
             QString iconCode = jsonObj["weather"].toArray()[0].toObject()["icon"].toString();
 
             QMap<QString, QString> weatherIconMap = {
-                {"01", "./weather_image/sunny.png"},
-                {"02", "./weather_image/cloud_sun.png"},
-                {"03", "./weather_image/cloud.png"},
-                {"04", "./weather_image/cloud_meatball.png"},
-                {"09", "./weather_image/cloud_sun_rain.png"},
-                {"10", "./weather_image/rain_heavy.png"},
-                {"11", "./weather_image/storm.png"},
-                {"13", "./weather_image/snow.png"},
-                {"50", "./weather_image/smog.png"}
+                {"01", "./image/weather_image/sunny.png"},
+                {"02", "./image/weather_image/cloud_sun.png"},
+                {"03", "./image/weather_image/cloud.png"},
+                {"04", "./image/weather_image/cloud_meatball.png"},
+                {"09", "./image/weather_image/cloud_sun_rain.png"},
+                {"10", "./image/weather_image/rain_heavy.png"},
+                {"11", "./image/weather_image/storm.png"},
+                {"13", "./image/weather_image/snow.png"},
+                {"50", "./image/weather_image/smog.png"}
             };
 
-            QString iconPath = weatherIconMap.value(iconCode.left(2), "./weather_image/sunny.png");
+            QString iconPath = weatherIconMap.value(iconCode.left(2), "./image/weather_image/sunny.png");
 
             emit weatherDataReceived(cityName, temperature, weatherDescription, iconPath);
         } else {
@@ -105,18 +105,18 @@ void Weather::onNetworkReply(QNetworkReply *reply) {
                     QString iconCode = forecastObj["weather"].toArray()[0].toObject()["icon"].toString();
 
                     QMap<QString, QString> weatherIconMap = {
-                        {"01", "./weather_image/sunny.png"},
-                        {"02", "./weather_image/cloud_sun.png"},
-                        {"03", "./weather_image/cloud.png"},
-                        {"04", "./weather_image/cloud_meatball.png"},
-                        {"09", "./weather_image/cloud_sun_rain.png"},
-                        {"10", "./weather_image/rain_heavy.png"},
-                        {"11", "./weather_image/storm.png"},
-                        {"13", "./weather_image/snow.png"},
-                        {"50", "./weather_image/smog.png"}
+                        {"01", "./image/weather_image/sunny.png"},
+                        {"02", "./image/weather_image/cloud_sun.png"},
+                        {"03", "./image/weather_image/cloud.png"},
+                        {"04", "./image/weather_image/cloud_meatball.png"},
+                        {"09", "./image/weather_image/cloud_sun_rain.png"},
+                        {"10", "./image/weather_image/rain_heavy.png"},
+                        {"11", "./image/weather_image/storm.png"},
+                        {"13", "./image/weather_image/snow.png"},
+                        {"50", "./image/weather_image/smog.png"}
                     };
 
-                    QString iconPath = weatherIconMap.value(iconCode.left(2), "./weather_image/sunny.png");
+                    QString iconPath = weatherIconMap.value(iconCode.left(2), "./image/weather_image/sunny.png");
 
                     QMap<QString, QVariant> forecastItem;
                     forecastItem["dateTime"] = dateOnly;

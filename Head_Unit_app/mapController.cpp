@@ -21,7 +21,7 @@ QString MapController::getGoogleMapHtml() const {
                     height: 550px;
                 }
             </style>
-            <script src="http://maps.google.com/maps/api/js?key={YOUR API KEY}&region=kr"></script>
+            <script src="https://maps.google.com/maps/api/js?key={YOUR API KEY}&region=kr"></script>
             </head>
 
             <body>
@@ -45,7 +45,7 @@ QString MapController::getGoogleMapHtml() const {
                                 document.getElementById("map"),
                                 {zoom: 17, center: ll}
                                 );
-                        new google.maps.marker.AdvancedMarkerElement(
+                        new google.maps.marker(
                             {position: ll, map: map, label: "current position"}
                         );
                     }
@@ -64,7 +64,7 @@ QString MapController::getGoogleMapHtml() const {
                                 );
                     }
                     function changeMap3(){
-                        window.open('pano.html','',width=300,height=300);
+                        window.open('pano.html','','width=300,height=300');
                     }
                 </script>
             </body>
@@ -132,7 +132,7 @@ QString MapController::getGoogleMapHtml_app() const {
                                 );
                     }
                     function changeMap3(){
-                        window.open('pano.html','',width=300,height=300);
+                        window.open('pano.html','','width=300,height=300');
                     }
                 </script>
             </body>
